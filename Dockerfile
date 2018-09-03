@@ -1,6 +1,6 @@
 FROM nginx:latest
 
-#ENV CLIENT_ID 407925b3-a53f-4c72-b9c0-04954db2b735
+#ENV CLIENT_ID
 #ENV CLIENT_ALTERID 64
 #ENV CLIENT_SECURITY aes-128-gcm
 ENV VER=3.38
@@ -28,7 +28,7 @@ RUN apt-get update \
 	&& mv /v2ray/v2ray-v$VER-linux-64/geoip.dat /v2ray/ \
 	&& mv /v2ray/v2ray-v$VER-linux-64/geosite.dat /v2ray/ \
 	&& chmod +x /v2ray/v2ray /v2ray/v2ctl \
-	&& rm -rf v2ray.zip \
+	&& rm -rf v2ray-linux-64.zip \
 	&& rm -rf v2ray-v$VER-linux-64 \
 	&& chgrp -R 0 /v2ray \
 	&& chmod -R g+rwX /v2ray 
