@@ -39,3 +39,5 @@ ADD conf/www.conf /etc/php/7.0/fpm/pool.d/
 ADD html /usr/share/nginx/html/
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT  /entrypoint.sh
+
+EXPOSE 8080
