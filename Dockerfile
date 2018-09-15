@@ -3,7 +3,7 @@ FROM nginx:latest
 #ENV CLIENT_ID
 #ENV CLIENT_ALTERID 64
 #ENV CLIENT_SECURITY aes-128-gcm
-ENV VER=3.39
+ENV VER=3.41
 
 ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
