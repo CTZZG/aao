@@ -23,13 +23,13 @@ RUN apt-get update \
 	&& cd /v2ray \
 	&& wget https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip --no-cookie --no-check-certificate \
 	&& unzip v2ray-linux-64.zip \
-	&& mv /v2ray/v2ray-v$VER-linux-64/v2ray /v2ray/ \
-	&& mv /v2ray/v2ray-v$VER-linux-64/v2ctl /v2ray/ \
-	&& mv /v2ray/v2ray-v$VER-linux-64/geoip.dat /v2ray/ \
-	&& mv /v2ray/v2ray-v$VER-linux-64/geosite.dat /v2ray/ \
+#	&& mv /v2ray/v2ray-v$VER-linux-64/v2ray /v2ray/ \
+#	&& mv /v2ray/v2ray-v$VER-linux-64/v2ctl /v2ray/ \
+#	&& mv /v2ray/v2ray-v$VER-linux-64/geoip.dat /v2ray/ \
+#	&& mv /v2ray/v2ray-v$VER-linux-64/geosite.dat /v2ray/ \
 	&& chmod +x /v2ray/v2ray /v2ray/v2ctl \
 	&& rm -rf v2ray-linux-64.zip \
-	&& rm -rf v2ray-v$VER-linux-64 \
+#	&& rm -rf v2ray-v$VER-linux-64 \
 	&& chgrp -R 0 /v2ray \
 	&& chmod -R g+rwX /v2ray 
 
