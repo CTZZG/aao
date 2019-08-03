@@ -9,7 +9,7 @@ ADD conf/nginx.conf /etc/nginx/
 ADD conf/default.conf /etc/nginx/conf.d/
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php7.3-mcrypt php-mysql php-readline wget unzip \
+	&& apt-get install -y --no-install-recommends --assume-yes apt-utils php-fpm php-curl php-cli php7.3-mcrypt php-mysql php-readline wget unzip \
 	&& chmod -R 777 /var/log/nginx /var/cache/nginx /var/run \
 	&& chgrp -R 0 /etc/nginx \
 	&& chmod -R g+rwx /etc/nginx \
