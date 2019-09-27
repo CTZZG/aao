@@ -21,4 +21,7 @@ rm -rf doc  geoip.dat  geosite.dat systemd  systemv  v2ctl  v2ctl.sig  v2ray  v2
 echo "v2ray更新成功"
 service php7.2-fpm restart
 /etc/init.d/caddy start
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
 exit 0
