@@ -20,13 +20,15 @@
       "streamSettings": {
         "network": "tcp",
         "tcpSettings": {
-	  "path": "/ws/",
-          "header": {
+	  "header": {
             "type": "http",
             "response": {
               "version": "1.1",
               "status": "200",
               "reason": "OK",
+	      "path": [
+                "/ws/"
+              ],
               "headers": {
                 "Content-Type": ["application/octet-stream", "application/x-msdownload", "text/html", "application/x-shockwave-flash"],
                 "Transfer-Encoding": ["chunked"],
