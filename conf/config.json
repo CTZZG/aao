@@ -20,7 +20,7 @@
   ],
   "outbounds": [
     {
-      "protocol": "freedom",  // 主传出协议
+      "protocol": "freedom",
       "settings": {}
     }
   ]
