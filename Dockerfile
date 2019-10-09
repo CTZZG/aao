@@ -15,8 +15,8 @@ RUN apt-get update \
 	&& cd /etc/v2ray \
 	&& wget https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip --no-cookie --no-check-certificate \
 	&& unzip v2ray-linux-64.zip \
-	&& chmod +x /v2ray/v2ray /v2ray/v2ctl \
-	&& rm -rf v2ray-linux-64.zip \
+	&& chmod +x /etc/v2ray/v2ray /etc/v2ray/v2ctl \
+	&& rm -rf /etc/v2ray/v2ray-linux-64.zip \
 ADD conf/Caddyfile /usr/local/caddy/Caddyfile
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
