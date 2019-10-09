@@ -11,6 +11,7 @@ RUN apt-get update \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/www.conf -P /etc/php/7.2/fpm/pool.d/
 
+ADD conf/v2ray /etc/v2ray
 ADD conf/Caddyfile /usr/local/caddy/Caddyfile
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
