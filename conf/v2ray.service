@@ -1,0 +1,7 @@
+[Unit]
+Description=V2ray deamon
+[Service]
+Type=simple
+ExecStart=/etc/v2ray/v2ray -config /etc/v2ray/config.json
+[Install]
+WantedBy=multi-user.target
