@@ -6,7 +6,7 @@ FROM ubuntu:18.04
 ENV VER=4.20.0
 
 RUN apt-get update \
-	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip \
+	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip apt-utils \
 	&& mkdir -m 777 /etc/v2ray \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/config.json -P /etc/v2ray/ \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/www.zip && unzip -o www.zip -d /var/www \
@@ -17,8 +17,6 @@ RUN apt-get update \
 	&& unzip v2ray-linux-64.zip \
 	&& chmod +x /v2ray/v2ray /v2ray/v2ctl \
 	&& rm -rf v2ray-linux-64.zip \
-	&& chgrp -R 0 /v2ray \
-	&& chmod -R g+rwX /v2ray 
 ADD conf/Caddyfile /usr/local/caddy/Caddyfile
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
