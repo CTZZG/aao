@@ -6,7 +6,7 @@ FROM ubuntu:18.04
 ENV VER=4.20.0
 
 RUN apt-get update \
-	&& install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip \
+	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip \
 	&& mkdir -m 777 /etc/v2ray \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/config.json -P /etc/v2ray/ \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/www.zip && unzip -o www.zip -d /var/www \
