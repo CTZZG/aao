@@ -1,5 +1,5 @@
 #!/bin/bash
-systemctl enable /etc/v2ray/systemd/v2ray.service
+systemctl enable /etc/v2ray/v2ray.service
 systemctl start v2ray
 service php7.2-fpm restart
 /etc/init.d/caddy start
