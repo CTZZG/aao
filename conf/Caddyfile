@@ -1,0 +1,8 @@
+:80 {
+    root /var/www
+    fastcgi / localhost:9000 php
+    gzip
+    proxy /ws/ localhost:30003 {
+	    websocket
+	}
+}
