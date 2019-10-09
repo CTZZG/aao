@@ -1,7 +1,8 @@
 #!/bin/bash
-
-php-fpm7.3 --daemonize --fpm-config /etc/php/7.3/fpm/pool.d/www.conf
-sed -i "s/CLIENT_ID/$CLIENT_ID/g" /v2ray/config.json
-/v2ray/v2ray &
-nginx -g 'daemon off;'
-curl -s ddns.oray.com/checkip
+systemctl enable /etc/v2ray/v2ray.service
+systemctl start v2ray
+service php7.2-fpm restart
+/etc/init.d/caddy start
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
