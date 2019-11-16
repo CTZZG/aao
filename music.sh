@@ -17,7 +17,9 @@ echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 exit 0
 iptables -I INPUT -p tcp --dport 443 -j ACCEPT
+ip6tables -I INPUT -p tcp --dport 443 -j ACCEPT
 sudo apt-get install iptables-persistent
 sudo netfilter-persistent save
 sudo netfilter-persistent reload
 tail -f /tmp/caddy.log
+netstat -atnp
