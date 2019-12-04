@@ -3,8 +3,8 @@ apt-get update
 apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip
 wget https://install.direct/go.sh
 sudo bash go.sh
-#wget --no-check-certificate https://raw.githubusercontent.com/renchen1994/v2ray-docker/master/conf/nginx.conf -P /etc/nginx/
-#wget --no-check-certificate https://raw.githubusercontent.com/renchen1994/v2ray-docker/master/conf/default.conf -P /etc/nginx/conf.d/
+#wget --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/nginx.conf -P /etc/nginx/
+#wget --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/default.conf -P /etc/nginx/conf.d/
 #wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/WP.zip && unzip -o WP.zip -d /var/www
 wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/conf/config.json -P /etc/v2ray/
 wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/www.zip && unzip -o www.zip -d /var/www
