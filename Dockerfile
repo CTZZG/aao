@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 #ENV CLIENT_ID
 #ENV CLIENT_ALTERID 64
 #ENV CLIENT_SECURITY aes-128-gcm
-ENV VER=4.22.0
+ENV VER=4.22.1
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip \
