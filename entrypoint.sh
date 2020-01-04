@@ -1,6 +1,5 @@
 #!/bin/bash
 
-php-fpm7.2 --daemonize --fpm-config /etc/php/7.2/fpm/pool.d/www.conf
+systemctl start v2ray
+service php7.2-fpm restart
 /etc/init.d/caddy start
-/etc/v2ray/v2ray
-
