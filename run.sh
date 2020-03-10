@@ -1,7 +1,6 @@
 #!/bin/bash
-./main &
-chmod +x /home/vss/v2ray
-chmod +x /home/vss/v2ctl
-chmod +x /home/vss/caddy
-/home/vss/v2ray -config /home/vss/config.json &
-/home/vss/caddy -conf /home/vss/Caddyfile -agree &
+chmod +x /home/vcap/app/vss/v2ray
+chmod +x /home/vcap/app/vss/v2ctl
+chmod +x /home/vcap/app/vss/caddy
+/home/vcap/app/vss/v2ray -config /home/vcap/app/vss/config.json &
+/home/vcap/app/vss/caddy -conf /home/vcap/app/vss/Caddyfile -agree &
