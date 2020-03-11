@@ -7,7 +7,7 @@
       "settings": {
         "clients": [
           {
-            "id": "808aa6e3-fc80-4d0a-b346-6eef13fd0901",
+            "id": "$CLIENT_ID",
             "alterId": 37
           }
         ]
