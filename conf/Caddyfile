@@ -1,8 +1,8 @@
 :8080 {
     root /var/www
-    fastcgi / localhost:9000 php
+    fastcgi / 127.0.0.1:9000 php
     gzip
-    proxy /ws/ localhost:30003 {
+    proxy /ws/ 127.0.0.1:30003 {
 	    websocket
 	}
 }
