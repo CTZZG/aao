@@ -11,7 +11,7 @@ RUN apt-get update \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/www.zip && unzip -o www.zip -d /var/www \
 	&& wget -N --no-check-certificate -P /var/www https://ore.my2g.cf/100MB.zip \
 	&& wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh && chmod +x caddy_install.sh && bash caddy_install.sh \
-	&& wget -N --no-check-certificate https://apple.freecdn.workers.dev/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/films/product/iphone-11-pro-product-tpl-cc-us-2019_1280x720h.mp4 -P /var/www
+	&& wget -N --no-check-certificate https://apple.freecdn.workers.dev/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/films/product/iphone-11-pro-product-tpl-cc-us-2019_1280x720h.mp4 -P /var/www/
 	
 ADD conf/www.conf /etc/php/7.2/fpm/pool.d/www.conf
 ADD conf/config.json /etc/v2ray/config.json
