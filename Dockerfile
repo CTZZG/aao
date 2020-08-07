@@ -9,10 +9,9 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip openssl ca-certificates \
 	&& mkdir /etc/caddy \
 	&& wget -N --no-check-certificate https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip -P /home && unzip -o /home/v2ray-linux-64.zip -d /etc/v2ray && chmod +x /etc/v2ray/v2ray && chmod +x /etc/v2ray/v2ctl \
-	&& wget -N --no-check-certificate https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz -P /home && tar zxvf /home/caddy_v1.0.4_linux_amd64.tar.gz -C /etc/caddy && chmod +x /etc/caddy/caddy \
-	&& wget -N --no-check-certificate https://raw.githubusercontent.com/renchen1994/aao/Aru-1/www.zip -P /home && unzip -o /home/www.zip -d /var/www \
-	&& wget -N --no-check-certificate https://apple.freecdn.workers.dev/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/films/product/iphone-11-pro-product-tpl-cc-us-2019_1280x720h.mp4 -P /var/www/
-	
+	&& wget -N --no-check-certificate https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz -P /home && tar zxvf /home/caddy_v1.0.4_linux_amd64.tar.gz -C /etc/caddy && chmod +x /etc/caddy/caddy
+
+ADD html /var/www
 ADD conf/www.conf /etc/php/7.2/fpm/pool.d/www.conf
 ADD conf/config.json /etc/v2ray/config.json
 ADD conf/Caddyfile /etc/caddy/Caddyfile
