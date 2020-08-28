@@ -7,6 +7,7 @@ ENV VER=4.27.0
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip openssl ca-certificates \
+	&& apt-get install --reinstall systemd \
 	&& mkdir /etc/caddy \
 	&& wget -N --no-check-certificate https://github.com/v2ray/v2ray-core/releases/download/v$VER/v2ray-linux-64.zip -P /home && unzip -o /home/v2ray-linux-64.zip -d /etc/v2ray && chmod +x /etc/v2ray/v2ray && chmod +x /etc/v2ray/v2ctl \
 	&& wget -N --no-check-certificate https://github.com/caddyserver/caddy/releases/download/v1.0.4/caddy_v1.0.4_linux_amd64.tar.gz -P /home && tar zxvf /home/caddy_v1.0.4_linux_amd64.tar.gz -C /etc/caddy && chmod +x /etc/caddy/caddy \
