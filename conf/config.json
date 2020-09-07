@@ -1,29 +1,31 @@
 {
-  "inbounds": [
-    {
-      "port": 30003,
-      "listen":"127.0.0.1",
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "CLIENT_ID",
-            "alterId": 37
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-        "path": "/ws/"
-        }
+  "log" : {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "warning"
+  },
+  "inbounds": {
+    "port": 30003,
+    "listen":"127.0.0.1",
+    "protocol": "vless",
+    "settings": {
+      "clients": [
+         {
+          "id": "CLIENT_ID",
+          "level": 0
+         }
+      ],
+      "decryption": "none"  //当前vless协议下必须配置为none
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+      "path": "/ws/"
       }
     }
-  ],
-  "outbounds": [
-    {
+  },
+  "outbounds": {
       "protocol": "freedom",
       "settings": {}
-    }
-  ]
+  }
 }
