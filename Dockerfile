@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 ENV CLIENT_ID 808aa6e3-fc80-4d0a-b346-6eef13fd7789
 #ENV CLIENT_ALTERID 64
 #ENV CLIENT_SECURITY auto
-ENV VER=4.29.0
+ENV VER=4.30.0
 
 RUN apt-get update \
 	&& apt-get install -y --no-install-recommends php-fpm php-curl php-cli php-mysql php-readline wget unzip openssl ca-certificates \
